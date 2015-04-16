@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>Prueba</title>
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.rawgit.com/micayael/jquery-ajaxlinks/master/jquery-ajaxlinks.css" rel="stylesheet"/>
+</head>
+<body>
+
+    <div class="container">
+        <div class="row">
+
+            <!-- Nav tabs -->
+            <ul class="nav nav-tabs ajax-tabs" role="tablist">
+                <li role="presentation" class="active">
+                    <a href="" data-target="#home" aria-controls="home" role="tab" data-toggle="tab" data-loaded="true">Home</a>
+                </li>
+                <li role="presentation">
+                    <a href="demo.php?param=2" data-target="#profile" aria-controls="profile" role="tab" data-toggle="tab">Profile</a>
+                </li>
+                <li role="presentation">
+                    <a href="demo.php?param=3" data-target="#messages" aria-controls="messages" role="tab" data-toggle="tab">Messages</a>
+                </li>
+                <li role="presentation">
+                    <a href="demo.php?param=4" data-target="#settings" aria-controls="settings" role="tab" data-toggle="tab">Settings</a>
+                </li>
+            </ul>
+
+            <!-- Tab panes -->
+            <div class="tab-content">
+                <div role="tabpanel" class="tab-pane fade in active" id="home">primera</div>
+                <div role="tabpanel" class="tab-pane fade" id="profile">segunda</div>
+                <div role="tabpanel" class="tab-pane fade" id="messages">tercera</div>
+                <div role="tabpanel" class="tab-pane fade" id="settings">cuarta</div>
+            </div>
+
+        </div>
+    </div>
+
+    <script type="text/javascript" src="http://code.jquery.com/jquery-1.9.1.js"></script>
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="https://cdn.rawgit.com/micayael/jquery-ajaxlinks/master/jquery-ajaxlinks.js"></script>
+    <script src="jquery.ajaxtabs-1.0.0.min.js"></script>
+
+    <script>
+        $(function() {
+//            $("ul.ajax-tabs").ajaxtabs();
+            $.ajaxtabs("ul.ajax-tabs");
+        });
+    </script>
+</body>
+</html>
