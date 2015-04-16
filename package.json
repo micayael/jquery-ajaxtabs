@@ -1,6 +1,6 @@
 {
   "name": "jquery.ajaxtabs",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "Add a simple way to bind ajax links tabs using twitter bootstrap by default",
   "homepage": "https://github.com/micayael/jquery-ajaxtabs",
   "bugs": {

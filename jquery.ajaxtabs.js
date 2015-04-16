@@ -1,22 +1,9 @@
 (function($) {
-    $.ajaxtabs = function(selector) {
-
-        var tabs = $(selector);
-
-        tabs.ajaxtabs();
-
-        if ($.fn.ajaxtabs.defaults.autoOpenFromUrl && tabs.length) {
-            if (window.location.hash.length > 1) {
-                tabs.find('a[data-target="#' + window.location.hash.substring(1) + '"]').click();
-            }
-        }
-    };
-
     $.fn.ajaxtabs = function(options) {
 
         var settings = $.extend($.fn.ajaxtabs.defaults, options);
 
-        return this.each(function() {
+        this.each(function() {
             var $this = $(this);
 
             var tabLinks = $this.find(settings.tabLinksSelector);
@@ -66,6 +53,14 @@
                 }
             });
         });
+
+        if (settings.autoOpenFromUrl && this.length) {
+            if (window.location.hash.length > 1) {
+                this.find('a[data-target="#' + window.location.hash.substring(1) + '"]').click();
+            }
+        }
+
+        return this;
     };
 
     $.fn.ajaxtabs.bindNewAjaxLinks = function(options) {
