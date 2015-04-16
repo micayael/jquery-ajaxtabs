@@ -19,8 +19,6 @@
         return this.each(function() {
             var $this = $(this);
 
-            console.log(this);
-
             var tabLinks = $this.find(settings.tabLinksSelector);
             var defaultTabLink = $this.find(settings.defaultTabLinksSelector);
 
