@@ -35,7 +35,7 @@
                 }
             });
 
-            tabLinks.loadingbar({
+            tabLinks.ajaxlinks({
                 effect: false,
                 removeAfterSuccess: settings.removeAfterSuccess,
                 clickNamespace: 'preAjaxTabRender',
@@ -71,7 +71,7 @@
     };
 
     $.fn.ajaxtabs.bindNewAjaxLinks = function(options) {
-        $(options.selector).loadingbar({
+        $(options.selector).ajaxlinks({
             clickNamespace: 'postAjaxTabOpen'
         });
     };
