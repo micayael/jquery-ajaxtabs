@@ -64,9 +64,9 @@
     };
 
     $.fn.ajaxtabs.bindNewAjaxLinks = function(options) {
-        $(options.selector).ajaxlinks({
-            clickNamespace: 'postAjaxTabOpen'
-        });
+        // agrega el evento click en el namespace default para que desde afuera
+        // se eliminen nuevamente en caso de volverse a llamar al plugin ajaxlinks.
+        $(options.selector).ajaxlinks();
     };
 
     $.fn.ajaxtabs.defaults = {
